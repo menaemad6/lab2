@@ -1,0 +1,26 @@
+name: Simple Worker
+
+on:
+  push:
+    -main
+
+jobs:
+  job1:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Step 1
+    - run: echo "Step 1 Run"
+
+    - name: Step 2
+    - run: echo "Step 2 Run"
+
+
+  job2:
+  needs: job1
+  runs-on: ubuntu-latest
+  steps:
+    - name: Step 1
+    - run: echo "Step 1 Run"
+
+    - name: Step 2
+    - run: echo "Step 2 Run"
